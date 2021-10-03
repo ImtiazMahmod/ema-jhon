@@ -1,0 +1,36 @@
+img {
+    width: 400px;
+    margin: 20px;
+}
+
+.header {
+    text-align: center;
+}
+
+.sub-header ul {
+    background-color: black;
+    text-align: start;
+    line-height: 3;
+    margin: 0;
+}
+
+.sub-header ul a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+
+.input {
+    background-color: rgb(56, 56, 56);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    width: 65%;
+    /* padding: 10px; */
+
+
+}
