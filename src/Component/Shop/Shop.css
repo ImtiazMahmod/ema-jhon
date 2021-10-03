@@ -8,3 +8,21 @@
     border-right: 1px solid lightgray;
     margin-right: 15px;
 }
+
+.input {
+    background-color: rgb(56, 56, 56);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.cartTotal{
+    color: white;
+}
+input {
+    width: 65%;
+    padding: 10px;
+    border-radius: 10px;
+
+}

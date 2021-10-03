@@ -51,8 +51,9 @@ const Shop = () => {
         <div
         onChange={searchBox}
         className="input">
-        <input type="text" placeholder="type here to search" />
-        <h2>4</h2>
+                <input type="text" placeholder="type here to search" />
+                <i className="cartTotal fas fa-shopping-cart"></i> 
+        <h2 className="cartTotal">4</h2>
     </div>
         <div className="shop-container">
             <div className="product-container">

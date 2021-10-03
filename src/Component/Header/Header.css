@@ -20,17 +20,3 @@ img {
     margin: 30px;
 }
 
-.input {
-    background-color: rgb(56, 56, 56);
-    padding: 20px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-input {
-    width: 65%;
-    /* padding: 10px; */
-
-
-}
