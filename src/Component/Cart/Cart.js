@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { productContext } from '../../App';
 import './Cart.css'
 
 const Cart = (props) => {
+    const [user,ring ]= useContext(productContext);
     // console.log(props)
     const {cart}=props
     /* const reducerFn = (previous,current)=>previous+current.price
@@ -17,19 +19,20 @@ const Cart = (props) => {
         totalQuantity = totalQuantity + item.quantity;
     }
     // console.log(totalQuantity)
-    const shipping=total>100?15:0;
+    const shipping=total>100?((total*0.05)):0;
     const tax = (total+ shipping)*0.1;
     const grandTotal = shipping+ tax + total;
     return (
         <div>
             <h1 className="cart-heading">Order Summery</h1>
             <p className="cart-heading">Items Orderd: {totalQuantity}</p>
-            <p>Items: ${props.cart.length}</p>
-            <p>Shiping & Handling: ${shipping}</p>
+            <p>Items: ${totalQuantity}</p>
+            <p>Shiping & Handling: ${shipping.toFixed(2)}</p>
             <p>Total Before Tax: ${total.toFixed(2)}</p>
             <p>Estimated Tax: ${tax.toFixed(2)}</p>
             <h4 className="total">Order Total:  ${grandTotal.toFixed(2)}</h4>
-            <button className="btn-regular review-btn">Review Your Order</button>
+            {props.children}
+            {user} hey {ring}
         </div>
     );
 };

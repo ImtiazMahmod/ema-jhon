@@ -1,14 +1,20 @@
+import { createContext } from 'react';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import './App.css';
 import Header from './Component/Header/Header';
 import Inventory from './Component/Inventory/Inventory';
 import NotFound from './Component/NotFound/NotFound';
 import OrderReview from './Component/OrderReview/OrderReview';
+import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import Shop from './Component/Shop/Shop';
+export const productContext = createContext('user')
+const user = ' ring'
+const king = 'khan'
 
 function App() {
   return (
-    <div>
+    <productContext.Provider value={[user, king]}>
+      <div>
       <Router>
         <Header></Header>
         <Switch>
@@ -24,6 +30,9 @@ function App() {
           <Route path="/inventory">
             <Inventory></Inventory>
           </Route>
+          <Route path="/place-order">
+            <PlaceOrder></PlaceOrder>
+          </Route>
 
           <Route path="*">
             <NotFound></NotFound>
@@ -32,6 +41,7 @@ function App() {
 
      </Router>
     </div>
+    </productContext.Provider>
   );
 }
 
