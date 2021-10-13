@@ -20,3 +20,12 @@ img {
     margin: 30px;
 }
 
+.btn-normal{
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: normal;
+    font-size: medium;
+    cursor: pointer;
+}

@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { productContext } from '../../App';
+import React from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const [user,ring ]= useContext(productContext);
+   
     // console.log(props)
     const {cart}=props
     /* const reducerFn = (previous,current)=>previous+current.price
@@ -32,7 +31,7 @@ const Cart = (props) => {
             <p>Estimated Tax: ${tax.toFixed(2)}</p>
             <h4 className="total">Order Total:  ${grandTotal.toFixed(2)}</h4>
             {props.children}
-            {user} hey {ring}
+           
         </div>
     );
 };
